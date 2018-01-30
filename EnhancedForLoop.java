@@ -2,6 +2,58 @@ import java.util.ArrayList;
 
 public class EnhancedForLoop
 {
+    public static double mean(double nums[])
+    {
+        double sum = 0;
+        for(double x: nums)
+        {
+            sum += x;
+        }
+        return sum/nums.length;
+    }
+    
+    public static double max(double nums[])
+    {
+        double max = 0;
+        for(double x: nums)
+        {
+            if(x > max)
+            {
+                max = x;
+            }
+        }
+        return max;
+    }
+        
+    public static double sumEvenVals(double nums[])
+    {
+        double sum = 0;
+        for(double x: nums)
+        {
+            if(x % 2 == 0)
+            {
+                sum += x;
+            }
+        }
+        return sum;
+    }
+    
+    public static int vowelCount(String[] word)
+    {
+        int counter = 0;
+        for(int i = 0; i < word.length; i++)
+        {
+            for(int j = 0; i< i.length(); j++)
+            {
+                if(i.substring(j,j+1).equals("a")||i.substring(j,j+1).equals("e")||i.substring(j,j+1).equals("i")||i.substring(j,j+1).equals("o")||i.substring(j,j+1).equals("u"))
+                {
+                    couter++;
+                }
+            }
+        }
+        return counter;
+    }
+    
     public static void main(String[] args)
     {
         /********** Examples **********/
@@ -55,14 +107,14 @@ public class EnhancedForLoop
         // #1 - Write a method mean(double nums[]) which uses an enhanced
         //      for loop to return the mean of the elements in nums. Test
         //      the method here.
-        
-        
+        int[] nums = {2,3,5,7,8,9};
+                
         
 
         // #2 - Write a method max(double nums[]) which uses an enhanced
         //      for loop to return the maximum value of the elements in
         //      nums. Then test the method.
-
+        
 
 
         
