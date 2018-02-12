@@ -43,11 +43,13 @@ public class EnhancedForLoop
         int counter = 0;
         for(int i = 0; i < word.length; i++)
         {
-            for(int j = 0; i< i.length(); j++)
+            int len = word[i].length();
+            for(int j = 0; i< len; j++)
             {
-                if(i.substring(j,j+1).equals("a")||i.substring(j,j+1).equals("e")||i.substring(j,j+1).equals("i")||i.substring(j,j+1).equals("o")||i.substring(j,j+1).equals("u"))
+                String sect =word[i].substring(j,j+1);
+                if(sect.equals("a")||sect.equals("e")||sect.equals("i")||sect.equals("o")||sect.equals("u"))
                 {
-                    couter++;
+                    counter++;
                 }
             }
         }
